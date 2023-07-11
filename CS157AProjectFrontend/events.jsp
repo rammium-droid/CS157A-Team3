@@ -15,7 +15,7 @@
    </tr>
     <%
      String db = "easyTicket";
-        String user; // assumes database name is the same as username
+        String user;
           user = "root";
         String password = "Teaotic757!";
         try {
