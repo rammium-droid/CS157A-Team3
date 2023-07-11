@@ -25,7 +25,7 @@
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT name,description,location,DateAndTime FROM Event");
             while (rs.next()) {
-                %><button name="event1">View Details</button><%
+                %><a href="VenuePage.html">View Details</a><%
                 out.println("  " + rs.getString(1) + "  -  " + rs.getString(2) + "  |  " + rs.getString(3) + "  |  " +
                             rs.getString(4) + "<br/>  <br/>");
             }
