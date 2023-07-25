@@ -27,7 +27,6 @@
             }
             else
             {
-                out.println("No radiobox selected.");
             }
 
             stmt.close();
