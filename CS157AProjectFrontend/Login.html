@@ -1,28 +1,14 @@
-<html lang="en" style="background-color:aquamarine">
+<!DOCTYPE html>
+<html lang="en" style="background-color:aquamarine;>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
 </head>
-  <body>
-    <h1>Log In</h1>
-    <p>All fields required</p><br>
-
-    <form action="Login.jsp" method="POST">
-        <label for="userID">UserID:</label><br>
-        <input type="text" id="userID" name="userID" required><br>
-        <label for="pw">Password:</label><br>
-        <input type="password" id="pw" name="pw" required><br>
-
-        <br>
-        <label>Type of Account:</label><br>
-        <input type="radio" id="userType" name="userType" value="buyer" required>
-        <label for="buyer">Buyer</label><br>
-        <input type="radio" id="userType" name="userType" value="seller" required>
-        <label for="seller">Event Planner</label><br>
-
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-  </body>
+<body align="center">
+    <h1 align="center">Log In</h1>
+    <form align="center">Email: <input type="text" name="email_address"></form>
+    <form align="center">Password: <input type="Password" name="Password"></form>
+    <button>Log In</button>
+</body>
 </html>
