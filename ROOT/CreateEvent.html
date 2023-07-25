@@ -10,7 +10,7 @@
 
     <form action="CreateEvent.jsp" method="POST">
         <label for="eventID">Event ID (atleast 5 digits):</label><br>
-        <input type="number" id="eventID" name="eventID" minlength="5" required><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
         <label for="eventName">Name of Event:</label><br>
         <input type="text" id="eventName" name="eventName" required><br>
         <label for="description">Event Description:</label><br>

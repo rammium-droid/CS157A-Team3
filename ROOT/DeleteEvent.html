@@ -1,0 +1,26 @@
+<html lang="en" style="background-color:aquamarine">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Delete Event</title>
+</head>
+  <body>
+    <h1>Delete Event</h1>
+    <p>All fields required</p><br>
+
+    <form action="DeleteEvent.jsp" method="POST">
+        <label for="eventID">Event ID (atleast 5 digits):</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+
+        <br>
+        <label>Are you sure:</label><br>
+        <input type="radio" id="userType" name="userType" value="yes" required>
+        <label for="yes">YES</label><br>
+        <input type="radio" id="userType" name="userType" value="no" required>
+        <label for="no">NO</label><br>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
