@@ -1,0 +1,23 @@
+<html lang="en" style="background-color:aquamarine">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create An Event-</title>
+</head>
+<body>
+<h1>Create New Event</h1>
+<p>All fields required</p><br>
+
+<form action="createEvent.jsp" method="POST">
+    <label>Event Name:</label><br>
+    <input type="text" id="eventName" name="eventName" required><br>
+    <label>Event Description: </label><br>
+    <input type="text" id="desc" name="desc" required><br>
+    <label>Event Date and Time (YYYY-MM-DD): </label><br>
+    <input type="text" id="date" name="date" required><br>
+    <label>Event Location Address: </label><br>
+    <input type="text" id="loc" name="loc" required><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
