@@ -21,8 +21,10 @@
             Statement stmt = con.createStatement();
             int rows1 = stmt.executeUpdate("insert into easyticket.event values('"+eid+"','"+ename+"','"+category+"','"+desc+"','"+date+" "+time+"')");
             int rows2 = stmt.executeUpdate("insert into easyticket.createevent values('"+session_username+"',"+eid+")");
+
             stmt.close();
             con.close();
+
             response.sendRedirect("http://localhost:8080/PlannerHomePage.html");
         } 
         

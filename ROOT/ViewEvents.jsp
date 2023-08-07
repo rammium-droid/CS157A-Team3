@@ -46,4 +46,12 @@
             out.println("SQLException caught: " + e.getMessage()); 
         }
     %>
+
+    <br>
+    <br>
+    <br>
+
+    <form action="PlannerHomePage.html" method="POST">
+        <input type="submit" value="Go Back">
+    </form>
   
