@@ -25,3 +25,9 @@ CREATE TABLE `event` (
   PRIMARY KEY (`eventID`),
   UNIQUE KEY `eventID_UNIQUE` (`eventID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `createevent` (
+  `EventPlannerUserID` varchar(45) NOT NULL,
+  `EventID` int NOT NULL,
+  PRIMARY KEY (`EventPlannerUserID`,`EventID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

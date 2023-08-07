@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color:aquamarine;>
+<html lang="en" style="background-color:aquamarine">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,10 @@
 </head>
 <body align="center">
     <h1 align="center">Log In</h1>
-    <form align="center">Email: <input type="text" name="email_address"></form>
-    <form align="center">Password: <input type="Password" name="Password"></form>
-    <button>Log In</button>
+    <form align="center" action="LoginServlet" method="post">
+		Email: <input type="text" name="emailAddress" required><br><br>
+    	Password: <input type="Password" name="password" required><br><br>
+    	<button type="submit">Log In</button>
+    </form>
 </body>
 </html>

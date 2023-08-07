@@ -21,7 +21,8 @@
                 if (rs.next()) 
                 {
                     if(rs.getString(4).equals(pass))
-                    {  
+                    {
+                        session.setAttribute("username", uid);  
                         response.sendRedirect("http://localhost:8080/BuyerHomePage.html");
                     }
                     else
@@ -41,6 +42,7 @@
                 {
                     if(rs.getString(4).equals(pass))
                     {
+                        session.setAttribute("username", uid);
                         response.sendRedirect("http://localhost:8080/PlannerHomePage.html");
                     }
                     else
