@@ -3,6 +3,8 @@
     String eid = request.getParameter("eventID");
     String answer = request.getParameter("userType");
 
+    String session_username = (String)session.getAttribute("username");
+
      String db = "easyticket";
         String user; // assumes database name is the same as username
         user = "root";
@@ -16,7 +18,7 @@
             
             if(answer.equals("yes"))
             {
-                int rs = stmt.executeUpdate("DELETE FROM easyticket.event where eventID = "+eid);
+                int rs = stmt.executeUpdate("DELETE FROM easyticket.createevent where EventID = "+eid+" AND EventPlannerUserID = '"+session_username+"'");
                 response.sendRedirect("http://localhost:8080/PlannerHomePage.html");
             }
             else

@@ -20,10 +20,14 @@
             if(utype.equals("buyer"))
             {
                 int rows = stmt.executeUpdate("insert into easyticket.buyer values('"+uid+"','"+fname+"','"+em+"','"+pass+"')");
+                session.setAttribute("username", uid);
+                response.sendRedirect("http://localhost:8080/BuyerHomePage.html");
             }
             else if(utype.equals("seller"))
             {
                 int rows = stmt.executeUpdate("insert into easyticket.eventplanner values('"+uid+"','"+fname+"','"+em+"','"+pass+"')");
+                session.setAttribute("username", uid);
+                response.sendRedirect("http://localhost:8080/PlannerHomePage.html");
             }
             else
             {
