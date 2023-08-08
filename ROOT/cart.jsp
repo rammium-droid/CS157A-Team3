@@ -25,7 +25,7 @@
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/easyticket?autoReconnect=true&useSSL=false",user, password);
         Statement stmt = con.createStatement();
         Statement stmt2 = con.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT easyticket.event.eventName,count(easyticket.cart.eventID) FROM easyticket.cart,easyticket.event,easyticket.buyer where easyticket.cart.cartID = '"+session_username+"' and easyticket.cart.eventID=easyticket.event.eventID group by event.eventID");
+        ResultSet rs = stmt.executeQuery("SELECT easyticket.event.eventName,count(easyticket.cart.eventID) FROM easyticket.cart,easyticket.event,easyticket.buyer where easyticket.cart.cartID = '"+session_username+"' AND easyticket.buyer.userID='"+session_username+"' and easyticket.cart.eventID=easyticket.event.eventID group by event.eventID");
         int i = 1;
         while(rs.next())
         {
