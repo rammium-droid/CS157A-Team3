@@ -2,33 +2,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create Event</title>
+	<title>Edit Event</title>
 </head>
   <body>
-    <h1>Create Event</h1>
-    <p>All fields required</p><br>
+    <h1>Edit Event</h1>
+    <p>Just fill the fields that you want to change.</p>
+    <p>Event ID field is mandatory because it is used to locate the event. You can't change Event ID.</p>
+    <p>If the date is changed, time also needs to be reentered. And if the time is changed, date also needs to be reentered.</p><br>
 
-    <form action="CreateEvent.jsp" method="POST">
+    <form action="EditEvent.jsp" method="POST">
         <label for="eventID">Event ID (atleast 5 digits):</label><br>
         <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <br>
         <label for="eventName">Name of Event:</label><br>
-        <input type="text" id="eventName" name="eventName" required><br>
+        <input type="text" id="eventName" name="eventName"><br>
         <label for="description">Event Description:</label><br>
-        <input type="text" id="description" name="description" size="170" required><br>
+        <input type="text" id="description" name="description" size="170"><br>
         <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date" required><br>
+        <input type="date" id="date" name="date"><br>
         <label for="time">Time:</label><br>
-        <input type="time" id="time" name="time" required><br>
+        <input type="time" id="time" name="time"><br>
 
         <br>
         <label>Type of Event:</label><br>
-        <input type="radio" id="userType" name="userType" value="sports" required>
+        <input type="radio" id="userType" name="userType" value="sports">
         <label for="sports">Sports</label><br>
-        <input type="radio" id="userType" name="userType" value="theater" required>
+        <input type="radio" id="userType" name="userType" value="theater">
         <label for="theater">Theater</label><br>
-        <input type="radio" id="userType" name="userType" value="conference" required>
+        <input type="radio" id="userType" name="userType" value="conference">
         <label for="conference">Conference</label><br>
-        <input type="radio" id="userType" name="userType" value="others" required>
+        <input type="radio" id="userType" name="userType" value="others">
         <label for="others">Others</label><br>
 
         <br>
