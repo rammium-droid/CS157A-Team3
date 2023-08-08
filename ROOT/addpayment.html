@@ -1,0 +1,25 @@
+<html lang="en" style="background-color:aquamarine">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PAYMENT</title>
+</head>
+<body>
+<h1>ADD PAYMENT</h1>
+<p>All fields required</p><br>
+
+    <form action="addpayment.jsp" method="POST">
+    <label>Card Number: </label><br>
+    <input type="number" id="cardNo" name="cardNo" required><br>
+    <label>Name on Card: </label><br>
+    <input type="text" id="cardName" name="cardName" required><br>
+    <label>Expiration Month</label><br>
+    <input type="number" id="expMo" name="expMo" required><br>
+    <label>Expiration Year: </label><br>
+    <input type="number" id="expYr" name="expYr" required><br>
+    <label>Security Code: </label><br>
+    <input type="number" id="code" name="code" required><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
