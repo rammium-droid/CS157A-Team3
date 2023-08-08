@@ -17,7 +17,7 @@
     String db = "easyticket";
     String user; // assumes database name is the same as username
     user = "root";
-    String password = "Teaotic757!";
+    String password = "mgnmgn";
     try
     {
         java.sql.Connection con;
@@ -51,4 +51,3 @@
 <form action="BuyerHomePage.html" method="POST">
     <input type="submit" value="Go Back">
 </form>
-

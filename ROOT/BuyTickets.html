@@ -1,0 +1,28 @@
+<html lang="en" style="background-color:aquamarine">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Buy Tickets</title>
+</head>
+  <body>
+    <h1>Buy Tickets</h1>
+    <p>All fields required</p><br>
+
+    <form action="BuyTickets.jsp" method="POST">
+        <label for="tranID">Transaction ID (atleast 3 digits):</label><br>
+        <input type="number" id="tranID" name="tranID" min="100" required><br>
+        <label for="eventID">Event ID (atleast 5 digits):</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <label for="tickets">Number of tickets:</label><br>
+        <input type="text" id="tickets" name="tickets" required><br>
+        <label for="pay">Card Number:</label><br>
+        <input type="text" id="pay" name="pay" required><br>
+
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/BuyerHomePage.html';">Go Back</button>
+    </form>
+  </body>
+</html>

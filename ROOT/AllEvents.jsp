@@ -18,7 +18,7 @@
         String db = "easyticket";
         String user; // assumes database name is the same as username
         user = "root";
-        String password = "Teaotic757!";
+        String password = "mgnmgn";
         try 
         {
             java.sql.Connection con; 
@@ -47,7 +47,7 @@
                 out.println("<BR>");
                 FileOutputStream details = new FileOutputStream(eid+"hi.jsp");
                 FileOutputStream addCart = new FileOutputStream(eid+"add.jsp");
-                FileWriter writeCart = new FileWriter("/Library/Tomcat/webapps/ROOT/"+eid+"add.jsp");
+                FileWriter writeCart = new FileWriter("C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/ROOT/"+eid+"add.jsp");
                 writeCart.write(p+p1+"@page import=\"java.sql.*\""+p1+p2+"\n"+"<html lang=\"en\" style=\"background-color:aquamarine\">\n" +
                         "<head>\n" +
                         "\t<meta charset=\"UTF-8\">\n" +
@@ -58,7 +58,7 @@
                                 "String session_username = (String)session.getAttribute(\"username\"); String db = \"easyticket\";\n" +
                                 "    String user; // assumes database name is the same as username\n" +
                                 "    user = \"root\";\n" +
-                                "    String password = \"Teaotic757!\";\n" +
+                                "    String password = \"mgnmgn\";\n" +
                                 "    try {\n" +
                                 "        java.sql.Connection con;\n" +
                                 "        Class.forName(\"com.mysql.jdbc.Driver\");\n" +
@@ -69,7 +69,7 @@
                                 "        out.println(\"SQLException caught: \" + e.getMessage());" +
                                 "\n" + "    }"+p1+p2);
                 writeCart.close();
-                FileWriter writeDetails = new FileWriter("/Library/Tomcat/webapps/ROOT/"+eid+"hi.jsp");
+                FileWriter writeDetails = new FileWriter("C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/ROOT/"+eid+"hi.jsp");
                 writeDetails.write("<html lang=\"en\" style=\"background-color:aquamarine\">\n" +
                         "<head>\n" +
                         "\t<meta charset=\"UTF-8\">\n" +

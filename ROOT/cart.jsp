@@ -17,7 +17,7 @@
     String db = "easyticket";
     String user; // assumes database name is the same as username
     user = "root";
-    String password = "Teaotic757!";
+    String password = "mgnmgn";
     try
     {
         java.sql.Connection con;
@@ -30,8 +30,8 @@
         while(rs.next())
         {
             String eName = rs.getString(1);
-            String qty = rs.getString(2);
-            out.println(i+". "+eName+ " Qty: "+qty);
+            String eid = rs.getString(2);
+            out.println(i+". "+eName+" ("+eid+")");
             out.println("<BR>");
             i++;
         }

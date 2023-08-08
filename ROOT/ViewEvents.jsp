@@ -25,14 +25,15 @@
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/easyticket?autoReconnect=true&useSSL=false",user, password);
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("SELECT createevent.EventID,event.eventName FROM easyticket.createevent,easyticket.event where EventPlannerUserID = '"+session_username+"' AND easyticket.createevent.EventID = easyticket.event.eventID");
+            ResultSet rs = stmt.executeQuery("SELECT createevent.EventID,event.eventName, event.location FROM easyticket.createevent,easyticket.event where EventPlannerUserID = '"+session_username+"' AND easyticket.createevent.EventID = easyticket.event.eventID");
             int i = 1;
             while(rs.next()) 
             {
                 String eid = rs.getString(1);
                 String eName = rs.getString(2);
+                String location = rs.getString(3);
 
-                out.println(i+". "+eName+" ("+eid+")");
+                out.println(i+". "+eName+" ("+eid+") - "+location);
                 out.println("<BR>");
                 i++;
             }

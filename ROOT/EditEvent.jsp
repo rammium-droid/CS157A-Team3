@@ -5,8 +5,8 @@
     String category = request.getParameter("userType");
     String desc = request.getParameter("description");
     String date = request.getParameter("date");
-    out.println(date);
     String time = request.getParameter("time");
+    String location = request.getParameter("eventLoc");
 
     String session_username = (String)session.getAttribute("username");
 
@@ -24,9 +24,10 @@
             Statement stmt3 = con.createStatement();
             Statement stmt4 = con.createStatement();
             Statement stmt5 = con.createStatement();
+            Statement stmt6 = con.createStatement();
 
 
-                ResultSet rs = stmt.executeQuery("SELECT event.eventID, eventName, category, description, date_and_time FROM easyticket.event, easyticket.createevent where event.eventID = "+eid+" AND EventPlannerUserID = '"+session_username+"' AND event.eventID = createevent.EventID");
+                ResultSet rs = stmt.executeQuery("SELECT event.eventID, eventName, category, description, date_and_time, location FROM easyticket.event, easyticket.createevent where event.eventID = "+eid+" AND EventPlannerUserID = '"+session_username+"' AND event.eventID = createevent.EventID");
                 if (rs.next()) 
                 {
                     if((rs.getString(2).equals(ename) == false) && (ename != ""))
@@ -49,6 +50,11 @@
                         int r = stmt5.executeUpdate("Update easyticket.event set date_and_time = '"+date+" "+time+"' Where eventID = "+eid);
                     }
 
+                    if((rs.getString(6).equals(location) == false) && (location != ""))
+                    {
+                        int r = stmt4.executeUpdate("Update easyticket.event set location = '"+location+"' Where eventID = "+eid);
+                    }
+
                     response.sendRedirect("http://localhost:8080/PlannerHomePage.html");
                 }
                 else
@@ -66,4 +72,3 @@
             out.println("SQLException caught: " + e.getMessage()); 
         }
     %>
-  

@@ -11,7 +11,7 @@
     String db = "easyticket";
     String user; // assumes database name is the same as username
     user = "root";
-    String password = "Teaotic757!";
+    String password = "mgnmgn";
     try
     {
         java.sql.Connection con;
@@ -29,4 +29,3 @@
         out.println("SQLException caught: " + e.getMessage());
     }
 %>
-

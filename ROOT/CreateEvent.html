@@ -1,40 +1,47 @@
 <html lang="en" style="background-color:aquamarine">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Event</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Event</title>
 </head>
-<body>
-<h1>Create Event</h1>
-<p>All fields required</p><br>
+  <body>
+    <h1>Create Event</h1>
+    <p>All fields required</p><br>
 
-<form action="CreateEvent.jsp" method="POST">
-    <label for="eventID">Event ID (atleast 5 digits):</label><br>
-    <input type="number" id="eventID" name="eventID" min="10000" required><br>
-    <label for="eventName">Name of Event:</label><br>
-    <input type="text" id="eventName" name="eventName" required><br>
-    <label for="description">Event Description:</label><br>
-    <input type="text" id="description" name="description" size="170" required><br>
-    <label for="date">Date:</label><br>
-    <input type="date" id="date" name="date" required><br>
-    <label for="time">Time:</label><br>
-    <input type="time" id="time" name="time" required><br>
-    <label for="eventLoc">Event location: </label><br>
-    <input type="text" id="eventLoc" name="eventLoc" required><br>
+    <form action="CreateEvent.jsp" method="POST">
+        <label for="eventID">Event ID (atleast 5 digits):</label><br>
+        <input type="number" id="eventID" name="eventID" min="10000" required><br>
+        <label for="eventName">Name of Event:</label><br>
+        <input type="text" id="eventName" name="eventName" required><br>
+        <label for="description">Event Description:</label><br>
+        <input type="text" id="description" name="description" size="170" required><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time" required><br>
+        <label for="eventLoc">Event location: </label><br>
+        <input type="text" id="eventLoc" name="eventLoc" required><br>
+        <label for="tickets">Number of Tickets: </label><br>
+        <input type="text" id="tickets" name="tickets" required><br>
+        <label for="price">Price per Ticket: </label><br>
+        <input type="text" id="price" name="price" required><br>
 
-    <br>
-    <label>Type of Event:</label><br>
-    <input type="radio" id="userType" name="userType" value="sports" required>
-    <label for="sports">Sports</label><br>
-    <input type="radio" id="userType" name="userType" value="theater" required>
-    <label for="theater">Theater</label><br>
-    <input type="radio" id="userType" name="userType" value="conference" required>
-    <label for="conference">Conference</label><br>
-    <input type="radio" id="userType" name="userType" value="others" required>
-    <label for="others">Others</label><br>
+        <br>
+        <label>Type of Event:</label><br>
+        <input type="radio" id="userType" name="userType" value="sports" required>
+        <label for="sports">Sports</label><br>
+        <input type="radio" id="userType" name="userType" value="theater" required>
+        <label for="theater">Theater</label><br>
+        <input type="radio" id="userType" name="userType" value="conference" required>
+        <label for="conference">Conference</label><br>
+        <input type="radio" id="userType" name="userType" value="others" required>
+        <label for="others">Others</label><br>
 
-    <br>
-    <input type="submit" value="Submit">
-</form>
-</body>
+        <br>
+        <input type="submit" value="Submit">
+        &nbsp
+        &nbsp
+        <button onclick="window.location.href = 'http://localhost:8080/PlannerHomePage.html';">Go Back</button>
+    </form>
+  </body>
 </html>
