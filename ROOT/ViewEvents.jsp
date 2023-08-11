@@ -34,6 +34,7 @@
                 String location = rs.getString(3);
 
                 out.println(i+". "+eName+" ("+eid+") - "+location);
+		out.println("<button onclick=\"window.location.href = 'http://localhost:8080/"+eid+"hi.jsp';\">DETAILS</button>");
                 out.println("<BR>");
                 i++;
             }
