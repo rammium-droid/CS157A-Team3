@@ -14,7 +14,7 @@
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/easyticket?autoReconnect=true&useSSL=false",user, password);
         Statement stmt = con.createStatement();
-stmt.executeUpdate("INSERT INTO easyticket.cart (cartID,eventID) VALUES ('roberto2',32653)");
+stmt.executeUpdate("INSERT INTO easyticket.cart (cartID,eventID) VALUES ('um',32653)");
     }catch(SQLException e) {
         out.println("SQLException caught: " + e.getMessage());
     }%>

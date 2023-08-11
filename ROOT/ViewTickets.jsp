@@ -4,10 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Your Events Page</title>
+	<title>Your Tickets Page</title>
 </head>
   <body>
-    <h1>YOUR EVENTS</h1>
+    <h1>YOUR TICKETS</h1>
   </body>
 </html>
 
@@ -25,16 +25,17 @@
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/easyticket?autoReconnect=true&useSSL=false",user, password);
             Statement stmt = con.createStatement();
             
-            ResultSet rs = stmt.executeQuery("SELECT createevent.EventID,event.eventName, event.location FROM easyticket.createevent,easyticket.event where EventPlannerUserID = '"+session_username+"' AND easyticket.createevent.EventID = easyticket.event.eventID");
+            ResultSet rs = stmt.executeQuery("SELECT event.eventName, event.location, event.date_and_time, hastickets.eventID, tickets FROM easyticket.hastickets,easyticket.event where hastickets.userID = '"+session_username+"' AND easyticket.hastickets.eventID = easyticket.event.eventID");
             int i = 1;
             while(rs.next()) 
             {
-                String eid = rs.getString(1);
-                String eName = rs.getString(2);
-                String location = rs.getString(3);
+                String eName = rs.getString(1);
+                String location = rs.getString(2);
+                String datentime = rs.getString(3);
+                String eid = rs.getString(4);
+                String tickets = rs.getString(5);
 
-                out.println(i+". "+eName+" ("+eid+") - "+location);
-                out.println("<button onclick=\"window.location.href = 'http://localhost:8080/"+eid+"hi.jsp';\">DETAILS</button>");
+                out.println(i+". "+eName+" ("+eid+") - "+location+"   at "+datentime+"   : "+ tickets+" tickets");
                 out.println("<BR>");
                 i++;
             }
@@ -53,7 +54,7 @@
     <br>
     <br>
 
-    <form action="PlannerHomePage.html" method="POST">
+    <form action="BuyerHomePage.html" method="POST">
         <input type="submit" value="Go Back">
     </form>
   
